@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- opening -->
+    <div class="all main-top">
+        <h3 class="mt-5">為了確保交易安全，請先完成簡訊OPT驗證。<br>請確認您輸入的手機號碼可以收到簡訊。</h3>
+
+        <form class="otp-input">
+            <h2>手機號碼 (Mobile)</h2>
+            <div class="input-group row mx-0">
+                <div class="col-4 pl-0 pr-2">
+                    <select class="form-control" id="country">
+                        <option>臺灣 (TW)</option>
+                        <option>美國 (US)</option>
+                        <option>日本 (JP)</option>
+                        <option>韓國 (KR)</option>
+                        <option>中國 (CN)</option>
+                    </select>
+                </div>
+                <div class="col-8 p-0 position-relative">
+                    <input type="tel" id="tel-input" class="form-control" placeholder="請輸入電話號碼" aria-label="請輸入電話號碼">
+                    <button class="btn btn-link" type="button" id="varify-btn">傳送驗證碼</button>
+                </div>
+            </div>
+            <h2>簡訊驗證碼</h2>
+            <input id="varify" name="varify" type="text" placeholder="請輸入驗證碼">
+            <label id="varify-warning" class="warning" for="varify"></label>
+            <div class="button-fixed">
+                <button id="submit" type="button"> 確認 </button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+
+
+    <script type="text/javascript">
+        $('#varify-btn').click(function () {
+            if ($('#tel-input').val() !== '') {
+                $(this).prop('disabled', true).text('3s');
+                // $('#tel-input').prop('disabled', true);
+                var count = 3;
+                var interval = setInterval(function () {
+                    count--;
+                    $('#varify-btn').text(count + 's');
+                    if (count == 0) {
+                        clearInterval(interval);
+                        $('#varify-btn').prop('disabled', false).text('傳送驗證碼');
+                    }
+                }, 1000);
+            }
+        });
+
+
+
+        var clickCount = 0;
+        $('#submit').click(function () {
+            if ($('#varify').val() !== '') {
+                $('#varify').val('');
+                clickCount++;
+                var remainingCount = 3 - clickCount;
+                $('#varify-warning').text('* 簡訊驗證碼錯誤，請重新輸入（剩餘次數 ' + remainingCount + '/3）');
+                if (clickCount === 3) {
+                    alert('很抱歉此號碼已被鎖定，若要進行交易請與客服聯繫，或是改用其他號碼完成OTP驗證');
+                    window.location = 'famipage.html';
+                }
+            }
+        })
+    </script>
+</body>

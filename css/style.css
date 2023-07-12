@@ -1,0 +1,585 @@
+html,
+body {
+  background-color: #F3F6F8;
+}
+
+.all {
+  margin: 0px 20px;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-family: PingFang TC, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: #333333;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: PingFang TC, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: #666666;
+  margin-bottom: 0;
+}
+
+.h4-fixed {
+  position: absolute;
+  bottom: 12%;
+  right: 20px;
+}
+
+h4 {
+  font-size: 1.7rem;
+  font-family: PingFang TC, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+
+h5 {
+  font-size: 1.3rem;
+  font-family: PingFang TC, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+
+p {
+  font-family: PingFang TC, Microsoft Yahei, 微軟正黑體, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 160%;
+  color: #606060;
+  letter-spacing: 0.1px;
+}
+
+.main-top h2 {
+  margin-top: 24px;
+  font-weight: 700;
+}
+
+.main-top .catch-warning {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(237, 91, 76, 0.1);
+  color: #ED5B4C;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 336px) {
+  .main-top .catch-warning {
+    font-size: 4svw;
+  }
+}
+
+.count-area {
+  margin-top: 16px;
+}
+
+.count-area img {
+  width: 160px;
+  margin-top: 28px;
+}
+
+.count-area p {
+  background-color: #F3F6F8;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.count-area p:before,
+.count-area p:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background-color: #999999;
+}
+
+.count-area p:before {
+  left: 0;
+  right: calc(50% + 2em + 8px);
+}
+
+.count-area p:after {
+  left: calc(50% + 2em + 8px);
+  right: 0;
+}
+
+.count-area h5 {
+  color: #666666;
+  margin-bottom: 0;
+}
+
+.count-area h5.nowTime {
+  color: #FF9500;
+  font-size: 46px;
+}
+
+@media screen and (max-width: 515px) {
+  .count-area h5.nowTime {
+    font-size: 12svw;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.barcode-area {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: 16px 20px 8px;
+  padding: 20px 12px;
+}
+
+.barcode-area img {
+  width: 160px;
+  margin-top: 8px;
+}
+
+.barcode-area+p {
+  text-align: center;
+}
+
+.barcode {
+  align-content: center;
+  padding: 44px;
+}
+
+.barcode img {
+  margin: 4px 0 !important;
+  max-width: 6cm;
+}
+
+.barcode h5 {
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+.barcode p {
+  margin-top: 15px;
+}
+
+
+.focus {
+  z-index: 5;
+  margin-top: 20px;
+}
+
+.focus img {
+  width: 95%;
+  align-items: center;
+  margin-bottom: 0px;
+  z-index: 5;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: #616161;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  margin: auto;
+  width: 90%;
+  height: 210px;
+  overflow: auto;
+
+  background-color: white;
+  border-radius: 20px;
+  opacity: 1;
+  z-index: 3;
+}
+
+.box p {
+  margin-bottom: 24px;
+}
+
+.box h2 {
+  margin-bottom: 16px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.input-error {
+  margin-top: 8px;
+}
+
+.form-text {
+  position: relative;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  line-height: 160%;
+  width: 100%;
+  height: 45px;
+
+  padding: 10px;
+  padding-left: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0.5px solid #DDDDDD;
+  border-radius: 10px;
+  margin-top: 16px;
+
+  font-family: PingFang TC, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+
+.static-value {
+  position: absolute;
+  right: 12px;
+  top: 28px;
+
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #666666;
+}
+
+.chip-area {
+  margin-top: 20px;
+}
+
+.chip {
+  display: inline-block;
+
+  border: solid 1px #666666;
+  border-radius: 24px;
+
+  padding: 5px 12px;
+  margin-bottom: 12px;
+  margin-right: 8px;
+
+  font-family: PingFang TC, Microsoft Yahei, 微軟正黑體, Arial, Helvetica, sans-serif;
+  ;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 140%;
+  color: #666666;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+
+.select-chip {
+  border: solid 1px #26D07C;
+  background: #26D07C;
+
+  color: #ffffff;
+}
+
+.button-fixed {
+  position: absolute;
+  /* bottom: 3%; */
+  right: 20px;
+  left: 20px;
+  z-index: -1;
+  padding-bottom: 24px;
+}
+
+button {
+  font-family: PingFang TC, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.1px;
+
+  width: 100%;
+  border: transparent;
+
+  background-color: #26D07C;
+  border-radius: 16px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+
+button:disabled {
+  background-color: #DDDDDD;
+}
+
+.button-outline {
+  color: #26D07C;
+  background-color: transparent;
+  border: 1px solid #26D07C;
+  margin-top: 8px;
+}
+
+.record {
+  padding-left: 20px;
+}
+
+.record-top h2 {
+  margin-top: 24px;
+}
+
+.record-top img {
+  margin-top: 24px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.data-area {
+  padding-left: 20px;
+}
+
+.dataline {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.data-expand {
+  margin-bottom: 12px;
+}
+
+.data p {
+  margin-top: 20px;
+  color: #333333;
+}
+
+.data h5 {
+  color: #666666;
+}
+
+.data .p-green {
+  color: #26D07C;
+  font-weight: 500;
+  text-align: center;
+}
+
+.data .p-orange {
+  color: #FF9500;
+  font-weight: 500;
+  text-align: center;
+}
+
+.data .p-default {
+  color: #666666;
+  font-weight: 500;
+  text-align: center;
+}
+
+.data-top img {
+  height: 50px;
+}
+
+.method {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.method-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  margin: auto;
+  width: 90%;
+  height: 250px;
+  overflow: auto;
+}
+
+.method h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.record-empty {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.record-empty-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  margin: auto;
+  width: 90%;
+  height: 350px;
+  overflow: auto;
+}
+
+.record-empty p {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.error {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  margin: auto;
+  width: 100%;
+  height: 350px;
+  overflow: auto;
+}
+
+.error h4 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 8px;
+}
+
+.error p {
+  text-align: center;
+  line-height: 140%;
+}
+
+.error button {
+  margin-top: 32px;
+}
+
+/* OTP 頁面樣式 */
+.otp-input h2 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.otp-input input,
+.otp-input select,
+.otp-input .btn {
+  line-height: 160%;
+  width: 100%;
+  height: 45px;
+  padding: 10px 12px;
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0.5px solid;
+  border-color: #DDDDDD !important;
+  border-radius: 10px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  font-family: PingFang TC, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  background-color: #ffffff;
+}
+
+.otp-input input:focus,
+.otp-input select:focus,
+.otp-input .btn:focus,
+.otp-input button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.otp-input input::placeholder {
+  color: #cccccc;
+  font-family: PingFang TC, Microsoft Yahei, 微軟正黑體, Arial, Helvetica, sans-serif;
+}
+
+.otp-input select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding-right: 32px;
+  background-image: url(../images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 1em;
+}
+
+.otp-input .btn-link {
+  color: #26D07C
+}
+
+.otp-input #tel-input {
+  padding-right: 9rem;
+}
+
+.otp-input #tel-input[disabled] {
+  background: #ffffff;
+  color: #999999;
+}
+
+.otp-input #varify-btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: max-content;
+  background: transparent;
+  border: none;
+}
+
+.otp-input #varify-btn[disabled] {
+  opacity: 1 !important;
+}
+
+.otp-input .warning {
+  margin-top: 4px;
+  color: #FF9500;
+  font-size: 1.3rem;
+}
+
+.otp-input .button-fixed {
+  margin-top: 40px;
+}
