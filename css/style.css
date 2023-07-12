@@ -169,7 +169,8 @@ p {
 
 .barcode img {
   margin: 4px 0 !important;
-  max-width: 11cm;
+  max-width: 384px;
+  max-height: 64px;
 }
 
 .barcode h5 {
