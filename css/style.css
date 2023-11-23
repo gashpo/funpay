@@ -221,7 +221,7 @@ p {
 }
 
 .watermark h2 {
-  color: #ED5B4C;
+  color: blue;
   font-weight: 900;
   font-size: 40px;
   /* transform: scaleY(1.5); */
