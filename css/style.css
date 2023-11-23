@@ -198,7 +198,6 @@ p {
   padding: 8px;
   border: 4px solid #ED5B4C;
   border-radius: 50%;
-  opacity: 0.4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,6 +215,8 @@ p {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 5;
+  opacity: 0.4;
 }
 
 .watermark h2 {
@@ -223,6 +224,9 @@ p {
   font-weight: 900;
   font-size: 40px;
   transform: scaleY(1.5);
+  z-index: 10;
+  border: none;
+  opacity: 0.4;
 }
 
 .textCircle {
