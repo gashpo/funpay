@@ -230,6 +230,7 @@ p {
   border: none;
   opacity: 0.4;
   text-decoration: none;
+  pointer-events: none;
 }
 
 .textCircle {
