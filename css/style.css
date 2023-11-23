@@ -123,6 +123,7 @@ p {
 .count-area h5 {
   color: #666666;
   margin-bottom: 0;
+  font-size: 12px;
 }
 
 .count-area h5.nowTime {
