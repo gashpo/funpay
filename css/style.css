@@ -172,7 +172,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 332px;
+  min-height: calc(100svw - 20px);
 }
 
 .barcode img {
